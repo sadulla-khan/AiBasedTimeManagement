@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="icon/x-icon" href="images/4.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="icon/x-icon" href="/images/icon.png">
+    <link rel="stylesheet" href="./css/todolist.css">
+    <link rel="stylesheet" href="">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <span class="primary material-icons-sharp">
+                        layers
+                        </span>
+                    <h2>OPPOR<span class="primary">TUNE</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="/home.html" >
+                    <span class="material-icons-sharp">home</span>
+                    <h3>Home</h3>
+                </a>
+
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">inventory</span>
+                    <h3>To do list</h3>
+                </a>
+                
+                
+                <a href="#">
+                    <span class="material-icons-sharp">insights</span>
+                    <h3>Performance</h3>
+                </a>
+                <a href="/commontasks.html">
+                    <span class="material-icons-sharp">receipt_long</span>
+                    <h3>Common tasks</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">report_gmailerrorred</span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">person_outline</span>
+                    <h3>Profile</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <main>
+            <h1>To Do List</h1>
+            <!--div class="date-container" id="dateContainer">
+            </div -->
+           <div class="date">
+                <input type="date" id="dateInput">
+            </div>
+            
+                <div class="task-container">
+                    <!-- Tasks will be added here dynamically -->
+                </div>
+            
+
+            <!-- 
+            <div class="recent-orders">
+                <h2>Recent Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product Number</th>
+                            <th>Payment</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Foldable Mini Drone</td>
+                            <td>85961</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Foldable Mini Drone</td>
+                            <td>85961</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Foldable Mini Drone</td>
+                            <td>85961</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Foldable Mini Drone</td>
+                            <td>85961</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Foldable Mini Drone</td>
+                            <td>85961</td>
+                            <td>Due</td>
+                            <td class="warning">Pending</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+        -->
+        </main>
+       <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="primary material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Dahman</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <!--div class="profile-photo">
+                        <img src="./images/profile.jpg">
+                    </div-->
+                </div>
+            </div>
+            <div class="add-new-tasks">
+                <h2>Add New Tasks</h2>
+                <div class="updates" id="updates">
+                   
+                </div>
+            </div>
+            <div class="sales-analytics">
+               
+                
+                <div class="input-container" id="askAi">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                        <h3>Ask Ai</h3>
+                    </div>
+                </div>
+                <div class="input-container" id="inputContainer">
+                    <input type="text" id="text-field" placeholder="Enter text">
+                    <button id="send-button">Send</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./js/todolist.js"></script>
+</body>
+
+</html>

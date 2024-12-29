@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=jacinto.design
+    ">
+    <link rel="stylesheet" href="./css/signup.css">
+</head>
+<body>
+   <section>
+      <div class="leaves">
+          <div class="set">
+              <div><img src="./pictures/leaf_01.png"></div>
+              <div><img src="./pictures/leaf_02.png"></div>
+              <div><img src="./pictures/leaf_03.png"></div>
+              <div><img src="./pictures/leaf_04.png"></div>
+              <div><img src="./pictures/leaf_01.png"></div>
+              <div><img src="./pictures/leaf_02.png"></div>
+              <div><img src="./pictures/leaf_03.png"></div>
+              <div><img src="./pictures/leaf_04.png"></div>
+          </div>
+      </div>
+      <img src="./pictures/bg.jpg" class="bg">
+      <img src="./pictures/girl.png" class="girl">
+      <img src="./pictures/trees.png" class="trees">
+
+    <div class="container">
+        <h1>Sign Up Today!</h1>
+        <!-- Form -->
+         <form id="form">
+             <!-- Email Address -->
+             <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="email@address" required>
+             </div>
+             <!-- Password -->
+             <div class="form-group">
+                <label for="password1">Password</label>
+                <input type="password" id="password1" placeholder="Creat Password (Min 8 Character)">
+             </div>
+             <!-- Confirm Password -->
+             <div class="form-group">
+                <label for="password2">Confirm Password</label>
+                <input type="password" id="password2" placeholder="Confirm Password" >
+             </div> 
+             
+             <button type="submit" class="btn">Register</button>
+        
+         </form>
+         <div class="group">
+            <a href="#">Forget Password</a>
+            <a href="./index.html">Login</a>
+        </div>
+         <!-- Error/Success Message -->
+          <div class="message-container">
+            <h3 id="message">Don't Hesitate!</h3>
+          </div>
+    </div>
+    <script type="module" src="./js/signup.js"> </script>
+   </body>
+</html>

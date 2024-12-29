@@ -1,0 +1,60 @@
+Project Directory: Create a new directory for your project (e.g., gemini-backend). This will keep your project files organized.
+
+Virtual Environment (Highly Recommended):
+
+Open your CMD or PowerShell and navigate to your project directory: cd C:\path\to\your\gemini-backend (replace with your actual path).
+Create a virtual environment: python -m venv .venv
+Activate the virtual environment: .venv\Scripts\activate (CMD) or .venv\Scripts\Activate.ps1 (PowerShell)
+Install Dependencies: With the virtual environment activated, install the necessary Python packages:
+
+Bash
+
+pip install Flask google-generativeai python-dotenv
+Create app.py: Create a file named app.py in your project directory and paste the following code into it:
+
+Python
+
+import os
+from flask import Flask, request, jsonify
+import google.generativeai as genai
+from dotenv import load_dotenv
+
+load_dotenv()
+
+app = Flask(__name__)
+
+try:
+    genai.configure(api_key=os.environ.get("YOUR_API_KEY"))
+    model = genai.GenerativeModel("gemini-1.5-flash")
+except Exception as e:
+    print(f"Error initializing Gemini API: {e}")
+    exit()
+
+@app.route('/generate', methods=['POST'])
+def generate():
+    try:
+        data = request.get_json()
+        prompt = data.get('prompt')
+
+        if not prompt:
+            return jsonify({'error': 'Prompt is required'}), 400
+
+        response = model.generate_content(prompt)
+        return jsonify({'text': response.text})
+
+    except Exception as e:
+        print(f"Error generating text: {e}")
+        return jsonify({'error': 'An error occurred during text generation'}), 500
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
+Create .env file: Create a file named .env in the same directory as app.py. Inside .env, add your Gemini API key:
+
+YOUR_API_KEY=YOUR_ACTUAL_API_KEY
+Replace YOUR_ACTUAL_API_KEY with your actual key. Do not put quotes around the key.
+
+Run the Flask Server: In your CMD or PowerShell (with the virtual environment still activated), navigate to your project directory and run:
+
+Bash
+
+python app.py
